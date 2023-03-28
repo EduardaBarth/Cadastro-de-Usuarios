@@ -1,60 +1,92 @@
-const usuarios = []
+const APP = {
+    usuarios: [
+        {id: 1, nome: "Joao", idade: 70, email: "@", senha: 123},
+        {id: 2, nome: "Maria", idade: 93, email: "@", senha: 123},
+    ]
+}
+
+
+
 function add(){
-    const inputNome = document.getElementById("nome")
-    const nome = inputNome.value
-    if (!nome) {
-        alert("escreva uma tarefa")
-        return
-    }
-    usuarios.push(nome) 
-    inputNome.value = ""
-    
     const inputId = document.getElementById("id")
     const id = inputId.value
     if (!id) {
-        alert("escreva uma tarefa")
+        alert("informe seu id")
         return
     }
-    usuarios.push(id) 
-    inputId.value = ""
 
-    const inputEmail = document.getElementById("email")
-    const email = inputEmail.value
-    if (!email) {
-        alert("escreva uma tarefa")
+    const inputNome = document.getElementById("nome")
+    const nome = inputNome.value
+    if (!nome) {
+        alert("informe seu nome")
         return
     }
-    usuarios.push(email) 
-    inputEmail.value = ""
-
-    const inputSenha = document.getElementById("senha")
-    const senha = inputSenha.value
-    if (!senha) {
-        alert("escreva uma tarefa")
-        return
-    }
-    usuarios.push(senha) 
-    inputSenha.value = ""
 
     const inputIdade = document.getElementById("idade")
     const idade = inputIdade.value
     if (!idade) {
-        alert("escreva uma tarefa")
+        alert("informe sua idade")
         return
     }
-    usuarios.push(idade) 
-    inputIdade.value = ""
 
+    const inputEmail = document.getElementById("email")
+    const email = inputEmail.value
+    if (!email) {
+        alert("informe seu email")
+        return
+    }
+     
+    const inputSenha = document.getElementById("senha")
+    const senha = inputSenha.value
+    if (!senha) {
+        alert("informe sua senha")
+        return
+    }
+
+    const novoUsuario = {id, nome, idade, email, senha}
+    console.log(novoUsuario)
+    APP.usuarios.push(novoUsuario)
     render()
-}
-function render(){
-    const body = document.querySelector("body")
-    usuarios.forEach(function(nome){
-        const p = document.createElement("p") //criando um novo li
-        p.innerText = nome 
 
-        body.appendChild(p)
-    })
-    
+    inputIdade.value = ""
+    inputId.value = ""
+    inputNome.value = ""
+    inputEmail.value = ""
+    inputSenha.value = ""
 }
+function render() {
+
+    const table = document.querySelector("table tbody")
+    
+    table.replaceChildren()
+
+    for (let i = 0; i < APP.usuarios.length; i++) {
+        const usuario = APP.usuarios[i]
+
+        const tr = document.createElement("tr")
+
+        const tdId = document.createElement("td")
+        tdId.innerText = usuario.id
+        tr.appendChild(tdId)
+
+        const tdNome = document.createElement("td")
+        tdNome.innerText = usuario.nome
+        tr.appendChild(tdNome)
+
+        const tdIdade = document.createElement("td")
+        tdIdade.innerText = usuario.idade
+        tr.appendChild(tdIdade)
+
+        const tdEmail = document.createElement("td")
+        tdEmail.innerText = usuario.email
+        tr.appendChild(tdEmail)
+
+        const tdSenha = document.createElement("td")
+        tdSenha.innerText = usuario.senha
+        tr.appendChild(tdSenha)
+
+        table.appendChild(tr)
+    }
+}
+
 render()
