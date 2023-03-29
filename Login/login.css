@@ -1,18 +1,72 @@
+* {
+    font-family: inter;
+    font-weight: bold;
+}
+body {
+    background-color: aliceblue;
+}
+
 .column1 {
     float: left;
     padding: 10px;
-    height: 300px;
-   
+    height: 60vh;
+    width: 70vh;
+    background-color: #2DAE00;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px 0px 0px 10px;
+    
 }
 
 .column2 {
     float: left;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    
+    height: 60vh;
+    color: #2DAE00;
     
 }
 
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    
+  }
+
+  .row-interno{
+    border-radius: 10px;
+    box-shadow: 0px 0px 60px rgba(21, 21, 21, 0.5);
+  }
+
+  input {
+    padding: 13px;
+    border-radius: 10px;
+    border: 0;
+    background-color: #C0C0C0;
+  }
+  button {
+    padding: 13px;
+    width: 100px;
+    border-radius: 5px;
+    border: 0;
+    background-color: #2DAE00;
+    color: white;
+    cursor: pointer;
+  }
+  .login-texto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+  .diferenca {
+    font-size: 28px;
   }
