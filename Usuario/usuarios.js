@@ -106,4 +106,8 @@ function render() {
     }
 }
 
+function verificacao(){
+    
+}
+
 render()

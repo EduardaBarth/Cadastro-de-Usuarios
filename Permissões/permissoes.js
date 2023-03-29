@@ -14,19 +14,27 @@ function add(){
     }
 
     const novaPermissao= {nome}
-    APP.permissoes.push(novaPermissao)
+    //APP.permissoes.push(novaPermissao)
+
+    const perm = JSON.parse(localStorage.getItem("perm"))
+    localStorage.setItem("perm",JSON.stringify(perm.concat(novaPermissao)))
+
     render()
 
     inputPermissao.value = ""
 }
 
 function render(){
+    const perm = JSON.parse(localStorage.getItem("perm"))
+
+    if(!perm) localStorage.setItem("perm",JSON.stringify(APP.permissoes))
     const table = document.querySelector("table tbody")
+
     
     table.replaceChildren()
 
-    for (let i = 0; i < APP.permissoes.length; i++) {
-        const permissao = APP.permissoes[i]
+    for (let i = 0; i < perm.length; i++) {
+        const permissao = perm[i]
 
         const tr = document.createElement("tr")
 
