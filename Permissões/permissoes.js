@@ -26,11 +26,9 @@ function add(){
 
 function render(){
     const perm = JSON.parse(localStorage.getItem("perm"))
-
     if(!perm) localStorage.setItem("perm",JSON.stringify(APP.permissoes))
-    const table = document.querySelector("table tbody")
 
-    
+    const table = document.querySelector("table tbody")
     table.replaceChildren()
 
     for (let i = 0; i < perm.length; i++) {
@@ -45,4 +43,5 @@ function render(){
         table.appendChild(tr)
     }
 }
+
 render()

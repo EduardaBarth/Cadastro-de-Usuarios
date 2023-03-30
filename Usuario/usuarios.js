@@ -70,12 +70,13 @@ function add(){
 
 function render() {
     const users = JSON.parse(localStorage.getItem("users"))
-
     if(!users) localStorage.setItem("users",JSON.stringify(APP.usuarios))
+
     const table = document.querySelector("table tbody")
-    
     table.replaceChildren()
+    
     for (let i = 0; i < users.length; i++) {
+        
         
         //const usuario = localStorage.getItem(APP.usuarios[i])
         const usuario = users[i]
