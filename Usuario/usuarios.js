@@ -1,7 +1,7 @@
 const APP = {
     usuarios: [
-        {id: 1, nome: "Joao", idade: 70, email: "@", senha: 123},
-        {id: 2, nome: "Maria", idade: 93, email: "@", senha: 123},
+        {id: 1, nome: "Joao", idade: 70, email: "@", senha: 123, alcada: "Gerente"},
+        {id: 2, nome: "Maria", idade: 93, email: "@", senha: 123, alcada: "Adm"},
     ]
 }
 
@@ -39,9 +39,19 @@ function addUsuario(){
     if (!senha) {
         alert("informe sua senha")
         return
+    }   
+
+    const alc = JSON.parse(localStorage.getItem("alc"))
+    if(!alc) localStorage.setItem("alc",JSON.stringify(APP.alcadas))
+
+    for (let i = 0; i < alc.length; i++) {
+        const alcada = alc[i]
+
+        const inputA = document.getElementById(alcada.nome)
+        const alcada2 = inputA.checked
     }
 
-    const novoUsuario = {id, nome, idade, email, senha}
+    const novoUsuario = {id, nome, idade, email, senha, alc}
     
     const users = JSON.parse(localStorage.getItem("users"))
     localStorage.setItem("users",JSON.stringify(users.concat(novoUsuario)))
@@ -90,4 +100,24 @@ function render() {
         table.appendChild(tr)
     }
 }
+
+function mostrarAlcada(){
+    const alc = JSON.parse(localStorage.getItem("alc"))
+    if(!alc) localStorage.setItem("alc",JSON.stringify(APP.alcadas))
+
+    const select = document.querySelector("select")
+
+    for (let i = 0; i < alc.length; i++) {
+        const alcada = alc[i]
+
+        const option = document.createElement("option")
+        option.id = alcada.nome
+        option.innerHTML = alcada.nome
+
+        select.appendChild(option)
+    }
+}
+
 render()
+
+mostrarAlcada()

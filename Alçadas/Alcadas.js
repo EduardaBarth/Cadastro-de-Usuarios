@@ -32,7 +32,6 @@ function addAlcada(){
     }   
  
     const novaAlcada= {nome, permissao: PVerdadeiras}
-    console.log(novaAlcada)
 
     const alc = JSON.parse(localStorage.getItem("alc"))
     localStorage.setItem("alc", JSON.stringify(alc.concat(novaAlcada)))
@@ -59,13 +58,12 @@ function render(){
         tr.appendChild(tdNome)
 
         const tdP = document.createElement("td")
-        tdP.innerText = alcada.permissao
+        tdP.innerHTML = alcada.permissao
         tr.appendChild(tdP)
 
         table.appendChild(tr)
     }
 }
-
 
 function mostrarPermissoes(){
     const perm = JSON.parse(localStorage.getItem("perm"))
@@ -92,4 +90,3 @@ function mostrarPermissoes(){
 render()
 
 mostrarPermissoes()
-
