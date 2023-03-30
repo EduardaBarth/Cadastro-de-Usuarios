@@ -1,11 +1,11 @@
 const APP = {
     permissoes: [
-        {nome: "Editar"},
-        {nome: "Deletar"},
+        {id: "editar", nome: "Editar"},
+        {id: "deletar", nome: "Deletar"},
     ]
 }
 
-function add(){
+function addPermissao(){
     const inputPermissao = document.getElementById("permissao")
     const nome = inputPermissao.value
     if (!nome) {
@@ -13,11 +13,11 @@ function add(){
         return
     }
 
-    const novaPermissao= {nome}
-    //APP.permissoes.push(novaPermissao)
+    const novaPermissao= {id: nome.toLowerCase(), nome}
+
 
     const perm = JSON.parse(localStorage.getItem("perm"))
-    localStorage.setItem("perm",JSON.stringify(perm.concat(novaPermissao)))
+    localStorage.setItem("perm", JSON.stringify(perm.concat(novaPermissao)))
 
     render()
 
@@ -26,7 +26,7 @@ function add(){
 
 function render(){
     const perm = JSON.parse(localStorage.getItem("perm"))
-    if(!perm) localStorage.setItem("perm",JSON.stringify(APP.permissoes))
+    if(!perm) localStorage.setItem("perm", JSON.stringify(APP.permissoes))
 
     const table = document.querySelector("table tbody")
     table.replaceChildren()

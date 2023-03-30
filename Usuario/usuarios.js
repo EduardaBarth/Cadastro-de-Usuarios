@@ -5,9 +5,7 @@ const APP = {
     ]
 }
 
-
-
-function add(){
+function addUsuario(){
     const inputId = document.getElementById("id")
     const id = inputId.value
     if (!id) {
@@ -44,29 +42,18 @@ function add(){
     }
 
     const novoUsuario = {id, nome, idade, email, senha}
-    // console.log(novoUsuario)
-    // APP.usuarios.push(novoUsuario)
-
     
     const users = JSON.parse(localStorage.getItem("users"))
     localStorage.setItem("users",JSON.stringify(users.concat(novoUsuario)))
     
     render()
 
-    
-
-
-
     inputIdade.value = ""
     inputId.value = ""
     inputNome.value = ""
     inputEmail.value = ""
     inputSenha.value = ""
-
-    //location.reload()
 }
-
-
 
 function render() {
     const users = JSON.parse(localStorage.getItem("users"))
@@ -76,9 +63,6 @@ function render() {
     table.replaceChildren()
     
     for (let i = 0; i < users.length; i++) {
-        
-        
-        //const usuario = localStorage.getItem(APP.usuarios[i])
         const usuario = users[i]
 
         const tr = document.createElement("tr")
@@ -106,9 +90,4 @@ function render() {
         table.appendChild(tr)
     }
 }
-
-function verificacao(){
-    
-}
-
 render()
