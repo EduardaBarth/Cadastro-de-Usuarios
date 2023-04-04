@@ -40,18 +40,10 @@ function addUsuario(){
         alert("informe sua senha")
         return
     }   
-
-    const alc = JSON.parse(localStorage.getItem("alc"))
-    if(!alc) localStorage.setItem("alc",JSON.stringify(APP.alcadas))
-
-    for (let i = 0; i < alc.length; i++) {
-        const alcada = alc[i]
-
-        const inputA = document.getElementById(alcada.nome)
-        const alcada2 = inputA.checked
-    }
-
-    const novoUsuario = {id, nome, idade, email, senha, alc}
+    const select = document.getElementById("select")
+    const alcada = select.options[select.selectedIndex].value
+    
+    const novoUsuario = {id, nome, idade, email, senha, alcada}
     
     const users = JSON.parse(localStorage.getItem("users"))
     localStorage.setItem("users",JSON.stringify(users.concat(novoUsuario)))
@@ -97,6 +89,10 @@ function render() {
         tdSenha.innerText = usuario.senha
         tr.appendChild(tdSenha)
 
+        const tdAlcada = document.createElement("td")
+        tdAlcada.innerText = usuario.alcada
+        tr.appendChild(tdAlcada)
+
         table.appendChild(tr)
     }
 }
@@ -111,7 +107,7 @@ function mostrarAlcada(){
         const alcada = alc[i]
 
         const option = document.createElement("option")
-        option.id = alcada.nome
+        option.id = alcada.id
         option.innerHTML = alcada.nome
 
         select.appendChild(option)

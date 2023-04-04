@@ -1,6 +1,6 @@
 const APP = {
     alcadas: [
-        {nome: "Gerente", permissao: "Editar"}
+        {id: "gerente", nome: "Gerente", permissao: "Editar"}
     ]
 }
 
@@ -31,7 +31,7 @@ function addAlcada(){
         return
     }   
  
-    const novaAlcada= {nome, permissao: PVerdadeiras}
+    const novaAlcada= {id: nome.toLowerCase(), nome, permissao: PVerdadeiras}
 
     const alc = JSON.parse(localStorage.getItem("alc"))
     localStorage.setItem("alc", JSON.stringify(alc.concat(novaAlcada)))
