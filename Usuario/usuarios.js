@@ -1,7 +1,7 @@
 const APP = {
     usuarios: [
         {id: 1, nome: "Joao", idade: 70, email: "@", senha: 123, alcada: "Gerente"},
-        {id: 2, nome: "Maria", idade: 93, email: "@", senha: 123, alcada: "Adm"},
+        {id: 2, nome: "Maria", idade: 93, email: "@1", senha: 1234, alcada: "Adm"},
     ]
 }
 
