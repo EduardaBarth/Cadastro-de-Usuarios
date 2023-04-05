@@ -1,6 +1,6 @@
 const APP = {
     alcadas: [
-        {id: "gerente", nome: "Gerente", permissao: "Editar"}
+        {id: "gerente", nome: "Gerente", permissao: [ { nome: "Editar" } ]}
     ]
 }
 
@@ -58,7 +58,13 @@ function render(){
         tr.appendChild(tdNome)
 
         const tdP = document.createElement("td")
-        tdP.innerHTML = alcada.permissao
+        let permissoes_string = ""
+
+        alcada.permissao.forEach(p => {
+          permissoes_string += p.nome + " "  
+        })
+
+        tdP.innerHTML = permissoes_string
         tr.appendChild(tdP)
 
         table.appendChild(tr)
