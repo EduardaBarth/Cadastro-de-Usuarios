@@ -32,10 +32,10 @@
       <div class="column2">
           <h1 class="login-texto"> Login</h1>
           <label for="Email">Email</label>
-          <input type="text" id="email" required name=Email/>
+          <input type="text" id="email" onchange="validate()"/>
           <label for="Senha">Senha</label>
-          <input type="password" id="senha" required name=Senha/>
-          <button onclick="verificacao()">Entrar</button>
+          <input type="password" id="senha" />
+          <button onclick="verificacao()" disabled = "true">Entrar</button>
       </div>
     </div>
     </div>

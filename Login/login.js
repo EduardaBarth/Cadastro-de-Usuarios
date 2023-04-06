@@ -15,3 +15,10 @@ function verificacao(){
         }
     }
 }
+
+function validate(){
+    const email = document.getElementById("email").value
+    if(!email){
+        
+    }
+}
