@@ -85,10 +85,6 @@ function render() {
         tdEmail.innerText = usuario.email
         tr.appendChild(tdEmail)
 
-        const tdSenha = document.createElement("td")
-        tdSenha.innerText = usuario.senha
-        tr.appendChild(tdSenha)
-
         const tdAlcada = document.createElement("td")
         tdAlcada.innerText = usuario.alcada
         tr.appendChild(tdAlcada)

@@ -6,27 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="Alcadas.js" defer></script>
+    <link rel="stylesheet" href="cadastroAlcada.css">
 </head>
 <body>
-    <label>Alçada: </label>
-    <input type="text" id="alcada">
+    <nav>
+        <a href="">
+        <ul>
+          <li class="greenplace"> GREENPLACE</li>
+          
+        </a>
+        <section class="divNav">
+            <button class="button"><a href="http://127.0.0.1:5500/Usuario/listagemUsuario.html">Voltar</a></button>
+        </section>
+        </ul>
+    </nav>
+    <main>
+        <section class="cadastro">
+            <label>Alçada: </label>
+            <input type="text" id="alcada">
 
-    <div onload="mostrarPermissoes()">
+            <div onload="mostrarPermissoes()"></div>
+
+            <button onclick="addAlcada()">Cadastrar</button>
+        </section>
         
-    </div>
+        <table>
+            <thead>
+                <tr>
+                    <td>Alçadas</td>
+                    <td>Permissões</td>
+                </tr>
+            </thead>
+            <tbody>
 
-    <button onclick="addAlcada()">Cadastrar</button>
-
-    <table>
-        <thead>
-            <tr>
-                <td>Alçadas</td>
-                <td>Permissões</td>
-            </tr>
-        </thead>
-        <tbody>
-
-        </tbody>
-    </table>
+            </tbody>
+        </table>
+    </main>
 </body>
 </html>

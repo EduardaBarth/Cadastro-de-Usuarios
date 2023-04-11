@@ -90,6 +90,8 @@ function mostrarPermissoes(){
 
         div.appendChild(input)
         div.appendChild(label)
+        const br = document.createElement("br")
+        div.appendChild(br)
     }
 }
 
