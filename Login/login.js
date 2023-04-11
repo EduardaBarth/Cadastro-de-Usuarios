@@ -1,24 +1,15 @@
+function logar(){
+    let email = document.getElementById("email").value
+    let senha = document.getElementById("senha").value
 
-function verificacao(){
-    const users = JSON.parse(localStorage.getItem("users"))
+    let users = JSON.parse(localStorage.getItem("users"))
+    if(!users) localStorage.setItem("users",JSON.stringify(APP.usuarios))
 
-    const email = document.getElementById("email").value
+    if(users.some((v)=>{return v.email==email && v.senha==senha})){
+        let user2 = users.filter((v)=>{return v.email==email && v.senha==senha})[0]
 
-
-    const senha = document.getElementById("senha").value
-    
-
-    for (let i = 0; i < users.length; i++) {
-        const usuario = users[i]
-        if(email === usuario.email && senha === usuario.senha){
-            window.location.replace('http://127.0.0.1:5500/Usuario/listagemUsuario.html')
-        }
-    }
-}
-
-function validate(){
-    const email = document.getElementById("email").value
-    if(!email){
-        
-    }
+        window.location.href = "Usuario/listagemUsuario.html"
+    }else{
+        alert("Email ou senha não identificados");
+    } 
 }

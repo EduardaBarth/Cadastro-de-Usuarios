@@ -93,13 +93,6 @@ function render() {
         tdAlcada.innerText = usuario.alcada
         tr.appendChild(tdAlcada)
 
-        const excluir = document.createElement("button")
-        excluir.innerText = "apagar"
-        tr.appendChild(excluir)
-        excluir.addEventListener("click", function(){
-            localStorage.removeItem('users[i]')
-            render()
-        })
 
         table.appendChild(tr)
     }
