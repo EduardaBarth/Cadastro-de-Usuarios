@@ -27,7 +27,7 @@ nav ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-right: 5%;
+    margin-right: 2%;
 }
 .greenplace {
     color: #124B54;
@@ -38,19 +38,51 @@ nav ul {
     font-family: 'New Rocker', cursive;
     cursor: pointer;
 }
+.divNav{
+    margin-top: 1.5%;
+}
+main{
+    margin-top: 30px;
+    display: flex;
+}
+.cadastro{
+    font-size: 20px;
+    flex-grow: 5;
+    margin-left: 60px;
+}
+div{
+    padding: 10px;
+}
 table{
-    margin-left: 25%;
-    margin-top: 4%;
-    font-size: 23px;
+   font-size: 20px;
+   flex-grow: 5;
+   margin-right: 60px;
 }
 table thead tr{
     background-color: #2DAE00;
 }
-div{
-    margin-top: 1.5%;
-}
 button{
-    font-size: 15px;
-    background-color: rgb(227, 238, 230);
-    border: #2DAE00 solid 3px;
+    border-style: outset;
+    font-size: 18px;
+    border: 1px solid #124B54;
+    
+}
+.button{
+    border: #2DAE00 solid 2px;
+}
+select{
+    font-size: 18px;
+    border: 1px solid #124B54;
+    padding-right: 20px;
+}
+label {
+    display: inline-block;
+    width: 90px;
+    text-align: left;
+}
+input{
+    width: 300px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #999;
 }

@@ -6,42 +6,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="usuarios.js" defer></script>
+    <link rel="stylesheet" href="cadastroUsuario.css">
 </head>
 <body>
-    <label>Id: </label>
-    <input type="number" id="id" value="3">
-    <label>Nome: </label>
-    <input type="text" id="nome" value="Pedro">
-    <label>Idade: </label>
-    <input type="number" id="idade" value="50">
-    <label>Email: </label>
-    <input type="text" id="email">
-    <label>Senha: </label>
-    <input type="text" id="senha">
-
-    <select name="" id="select" onload="mostrarAlcada()">
-
-    </select>
-
-
-    <button onclick="addUsuario()">Cadastrar</button>
+    <nav>
+        <a href="">
+        <ul>
+          <li class="greenplace"> GREENPLACE</li>
+          
+        </a>
+        <div class="divNav">
+            <button class="button"><a href="http://127.0.0.1:5500/Usuario/listagemUsuario.html">Voltar</a></button>
+        </div>
+        </ul>
+    </nav>
+    <main>
+        <section class="cadastro">
+            <div>
+                <label>Id: </label>
+                <input type="number" id="id" value="3" >
+            </div>
+            <div>
+                <label>Nome: </label>
+                <input type="text" id="nome" value="Pedro">
+            </div>
+            <div>
+                <label>Idade: </label>
+                <input type="number" id="idade" value="50">
+            </div>
+            <div>
+                <label>Email: </label>
+                <input type="text" id="email">
+            </div>
+            <div>
+                <label>Senha: </label>
+                <input type="text" id="senha">
+            </div>
+            <div class="botoes">
+                <select name="" id="select" onload="mostrarAlcada()"></select>
+                <button onclick="addUsuario()">Cadastrar</button>
+            </div>
+            
+        </section>
+        
+        <table>
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>Nome</td>
+                    <td>Idade</td>
+                    <td>Email</td>
+                    <td>Senha</td>
+                    <td>Alçada</td>
+                </tr>
+            </thead>
+            <tbody>
     
-    <button ><a href="http://127.0.0.1:5500/Usuario/listagemUsuario.html">Voltar</a></button>
-
-    <table>
-        <thead>
-            <tr>
-                <td>Id</td>
-                <td>Nome</td>
-                <td>Idade</td>
-                <td>Email</td>
-                <td>Senha</td>
-                <td>Alçada</td>
-            </tr>
-        </thead>
-        <tbody>
-
-        </tbody>
-    </table>
+            </tbody>
+        </table>
+    </main>
 </body>
 </html>
