@@ -59,6 +59,7 @@
 
   
 .container-footer {
+    background-image: linear-gradient(180deg, #80ff00, #3d7f34, #000000ea);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -67,39 +68,41 @@
     box-shadow: 0px -25px 20px rgba(0, 0, 0, 0.25);
 }
 
-.botoes-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.img-instagram {
+  width:40px;
+}
+.img-telegram {
+  width:40px;
+}
+.img-whatsapp {
+  width:40px;
 }
 
-.botao3-1-footer {
-    font-size: 16px;
-    font-family: "Inter", sans-serif;
-    color: black;
-    border: none;
-    font-weight: bold;
-    background-color: white;
-    margin: 5px;
+.sobre-footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.botao3-2-footer {
-    font-size: 16px;
-    font-family: "Inter", sans-serif;
-    color: black;
-    border: none;
-    font-weight: bold;
-    background-color: white;
-    margin: 5px;
+.ajuda-footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
 }
 
-.botao3-3-footer {
-    font-size: 16px;
-    font-family: "Inter", sans-serif;
-    color: black;
-    border: none;
-    font-weight: bold;
-    background-color: white;
-    margin: 5px;
+.elementos-footer {
+  display: flex;
+  gap: 50vh;
 }
+p {
+  font-size: 23px;
+}
+
+h2{
+  font-size: 35px;
+  margin-bottom:20px;
+}
+
+
 
