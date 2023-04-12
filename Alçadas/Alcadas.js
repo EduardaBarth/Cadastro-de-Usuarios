@@ -76,7 +76,7 @@ function mostrarPermissoes(){
 
     if(!perm) localStorage.setItem("perm",JSON.stringify(APP.permissoes))
     
-    const div = document.querySelector("div")
+    const div = document.getElementById("MP")
 
     for (let i = 0; i < perm.length; i++) {
         const permissao = perm[i]

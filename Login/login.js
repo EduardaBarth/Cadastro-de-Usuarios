@@ -8,7 +8,7 @@ function logar(){
     if(users.some((v)=>{return v.email==email && v.senha==senha})){
         let user2 = users.filter((v)=>{return v.email==email && v.senha==senha})[0]
 
-        window.location.href = "Usuario/listagemUsuario.html"
+        window.location.href = "/Usuario/listagemUsuario.html"
     }else{
         alert("Email ou senha não identificados");
     } 
