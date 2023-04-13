@@ -39,9 +39,10 @@ nav ul {
     cursor: pointer;
 }
 table{
-    margin-left: 25%;
+    margin-left: 20%;
     margin-top: 4%;
     font-size: 23px;
+    width: 60%;
 }
 table thead tr{
     background-color: #2DAE00;
