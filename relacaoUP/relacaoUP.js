@@ -2,9 +2,6 @@ function render(){
     const users = JSON.parse(localStorage.getItem("users"))
     if(!users) localStorage.setItem("users",JSON.stringify(APP.usuarios))
 
-    const perm = JSON.parse(localStorage.getItem("perm"))
-    if(!perm) localStorage.setItem("perm", JSON.stringify(APP.permissoes))
-
     const alc = JSON.parse(localStorage.getItem("alc"))
     if(!alc) localStorage.setItem("alc", JSON.stringify(APP.alcadas))
 
@@ -22,18 +19,22 @@ function render(){
 
         for (let i = 0; i < alc.length; i++) {
             const alcada = alc[i]
-    
+        
             let permissoes_string = ""
             const nome = alcada.nome
-    
+        
             alcada.permissao.forEach(p => {
               permissoes_string += p.nome + " "  
             })
-
+        
             if (usuario.alcada === alcada.nome){
-                
+                const tdPermissao = document.createElement("td")
+                tdPermissao.innerText = permissoes_string
+                tr.appendChild(tdPermissao)
             }
         }
+
+        table.appendChild(tr)
     }
     
 }
