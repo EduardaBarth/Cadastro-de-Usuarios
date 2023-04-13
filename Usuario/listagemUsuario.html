@@ -7,21 +7,27 @@
     <title>Document</title>
     <script src="usuarios.js" defer></script>
     <link rel="stylesheet" href="listagemUsuario.css">
+    <link rel="stylesheet" href="/Elementos/elementos.css">
 </head>
 <body>
-    <nav>
+
+      <nav>
         <a href="">
         <ul>
-          <li class="greenplace"> GREENPLACE</li>
-          
-        </a>
-        <div>
-            <button><a href="http://127.0.0.1:5500/Usuario/cadastroUsuario.html">Cadastrar novo usuario</a></button>
-            <button><a href="http://127.0.0.1:5500/Al%C3%A7adas/listagemAlcada.html">Alçadas</a></button>
-            <button><a href="http://127.0.0.1:5500/Permiss%C3%B5es/ListagemPermissao.html">Permissões</a></button>
-        </div>
-        </ul>
-      </nav>
+            <div>
+            <li class="greenplace"> GREENPLACE</li>
+            </div>
+                <div class="btn-listagem">
+                    <button><a href="http://127.0.0.1:5500/Usuario/cadastroUsuario.html">Cadastrar novo usuario</a></button>
+                    <button><a href="http://127.0.0.1:5500/Al%C3%A7adas/listagemAlcada.html">Alçadas</a></button>
+                    <button><a href="http://127.0.0.1:5500/Permiss%C3%B5es/ListagemPermissao.html">Permissões</a></button>
+                </div>
+                <div>
+                <button class="login">Logout</button>
+            </div>
+            </ul>
+    </nav>
+    
     <main>
         <table>
             <thead>
@@ -38,5 +44,31 @@
             </tbody>
         </table>
     </main>
+    <div class="container-footer">
+        <div class="elementos-footer">
+            <div class="ajuda-footer">
+              <h2>Ajuda</h2>
+              <p>usúarios</p>
+              <p>alçadas</p>
+              <p>permissões</p>
+            </div>
+
+            <div class="sobre-footer">
+            <h2>Sobre a Greenplace</h2>
+            <p>meio ambiente</p>
+            <p>sustentabilidade</p>
+            <p>prezervação</p>
+          </div>
+
+          <div class="contato-footer">
+          <h2 class="contato.footer">Contatos</h2>
+          <div class="img-footer">
+          <img class="img-instagram" src="/imagens/instagram.png" alt="">
+          <img class="img-telegram" src="/imagens/telegram.png" alt="">
+          <img class="img-whatsapp" src="/imagens/whatsapp.png" alt="">
+        </div>
+        </div>
+        </div>
+      </div>
 </body>
 </html>
