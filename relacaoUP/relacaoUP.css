@@ -27,7 +27,7 @@ nav ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-right: 2%;
+    margin-right: 5%;
 }
 .greenplace {
     color: #124B54;
@@ -38,36 +38,23 @@ nav ul {
     font-family: 'New Rocker', cursive;
     cursor: pointer;
 }
-.divNav{
-    margin-top: 1.5%;
-}
-main{
-    margin-top: 30px;
-    display: flex;
-}
-.cadastro{
-    font-size: 20px;
-    flex-grow: 1;
-    margin-left: 60px;
-}
-div{
-    padding: 10px;
-}
 table{
-    width: 80%;
-    font-size: 20px;
-    flex-grow: 3;
-    margin-right: 60px;
+    margin-left: 25%;
+    margin-top: 4%;
+    font-size: 23px;
+    width: 50%;
 }
 table thead tr{
     background-color: #2DAE00;
 }
-button{
-    border-style: outset;
-    font-size: 18px;
-    border: 1px solid #124B54;
-    
+div{
+    margin-top: 1.5%;
 }
-.button{
-    border: #2DAE00 solid 2px;
+main{
+
+}
+button{
+    font-size: 15px;
+    background-color: rgb(227, 238, 230);
+    border: #2DAE00 solid 3px;
 }

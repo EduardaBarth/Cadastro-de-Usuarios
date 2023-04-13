@@ -94,7 +94,6 @@ function mostrarPermissoes(){
         div.appendChild(br)
     }
 }
-
 render()
 
 mostrarPermissoes()

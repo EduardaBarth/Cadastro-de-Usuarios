@@ -43,21 +43,37 @@ nav ul {
 }
 main{
     margin-top: 30px;
+<<<<<<< Updated upstream
     display: flex;
 }
 .cadastro{
     font-size: 20px;
     flex-grow: 1;
     margin-left: 60px;
+=======
+    width: 90%;    
+    display: flex;
+    margin-left: 50px;
+}
+.cadastro{
+    font-size: 20px;
+    flex-grow: 5;
+>>>>>>> Stashed changes
 }
 div{
     padding: 10px;
 }
 table{
-    width: 80%;
+<<<<<<< Updated upstream
+    width: 30%;
     font-size: 20px;
     flex-grow: 3;
     margin-right: 60px;
+=======
+   font-size: 20px;
+   flex-grow: 5;
+   width: 60%;
+>>>>>>> Stashed changes
 }
 table thead tr{
     background-color: #2DAE00;
@@ -66,8 +82,31 @@ button{
     border-style: outset;
     font-size: 18px;
     border: 1px solid #124B54;
+<<<<<<< Updated upstream
+}
+.button{
+    border: #2DAE00 solid 2px;
+}
+=======
     
 }
 .button{
     border: #2DAE00 solid 2px;
 }
+select{
+    font-size: 18px;
+    border: 1px solid #124B54;
+    padding-right: 20px;
+}
+label {
+    display: inline-block;
+    width: 90px;
+    text-align: left;
+}
+input{
+    width: 300px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #999;
+}
+>>>>>>> Stashed changes
