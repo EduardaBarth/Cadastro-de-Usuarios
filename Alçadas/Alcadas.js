@@ -71,26 +71,6 @@ function render(){
     }
 }
 
-function permissao(){
-    const perm = JSON.parse(localStorage.getItem("perm"))
-    if(!perm) localStorage.setItem("perm", JSON.stringify(APP.permissoes))
-
-    const table = document.getElementById("tbodyPermissao")
-    table.replaceChildren()
-
-    for (let i = 0; i < perm.length; i++) {
-        const permissao = perm[i]
-
-        const tr = document.createElement("tr")
-
-        const td = document.createElement("td")
-        td.innerText = permissao.nome
-        tr.appendChild(td)
-
-        table.appendChild(tr)
-    }
-}
-
 function mostrarPermissoes(){
     const perm = JSON.parse(localStorage.getItem("perm"))
 
@@ -115,5 +95,5 @@ function mostrarPermissoes(){
     }
 }
 render()
+
 mostrarPermissoes()
-permissao()
