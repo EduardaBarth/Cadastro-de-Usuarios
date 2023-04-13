@@ -54,7 +54,7 @@ div{
     padding: 10px;
 }
 table{
-    width: 80%;
+    width: 30%;
     font-size: 20px;
     flex-grow: 3;
     margin-right: 60px;
@@ -66,7 +66,6 @@ button{
     border-style: outset;
     font-size: 18px;
     border: 1px solid #124B54;
-    
 }
 .button{
     border: #2DAE00 solid 2px;
