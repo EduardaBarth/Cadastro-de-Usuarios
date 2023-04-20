@@ -89,7 +89,7 @@ function render() {
         tdAlcada.innerText = usuario.alcada
         tr.appendChild(tdAlcada)
 
-
+        
         table.appendChild(tr)
     }
     
