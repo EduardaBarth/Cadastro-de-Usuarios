@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="usuarios.js" defer></script>
+    <script src="/Login/login.js" defer></script>
     <link rel="stylesheet" href="listagemUsuario.css">
     <link rel="stylesheet" href="/Elementos/elementos.css">
 </head>
@@ -20,9 +21,10 @@
                 <div class="btn-listagem">
                     <button><a href="http://127.0.0.1:5500/Usuario/cadastroUsuario.html">Cadastrar novo usuario</a></button>
                     <button><a href="http://127.0.0.1:5500/Al%C3%A7adas/listagemAlcada.html">Alçadas e permissões</a></button>
+                    <button><a href="http://127.0.0.1:5500/relacaoUP/relacaoUP.html">Relação usuário e suas permissões</a></button>
                 </div>
                 <div>
-                <button class="login">Logout</button>
+                <button onclick="logout()" class="login">Logout</button>
             </div>
             </ul>
     </nav>

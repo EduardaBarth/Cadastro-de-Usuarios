@@ -13,3 +13,9 @@ function logar(){
         alert("Email ou senha não identificados");
     } 
 }
+function logout(){
+    localStorage.removeItem('email')
+    localStorage.removeItem('senha')
+
+    window.location.href = "/Login/login.html"
+}

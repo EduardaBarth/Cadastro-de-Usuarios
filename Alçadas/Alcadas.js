@@ -1,6 +1,6 @@
 const APP = {
     alcadas: [
-        {id: "gerente", nome: "Gerente", permissao: [ { nome: "Editar" } ]}
+        {id: "gerente", nome: "Administrador", permissao: [ { nome: "Editar" } ]}
     ]
 }
 
