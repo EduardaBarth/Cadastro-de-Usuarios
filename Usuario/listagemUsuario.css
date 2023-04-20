@@ -10,12 +10,14 @@
 body {
     background:   rgb(197, 235, 205);
     overflow: hidden;
-
+    min-height: 100vh;
+    border: solid black 3px;
 }
 table{
-    margin-left: 25%;
+    margin-left: 10%;
     margin-top: 4%;
     font-size: 23px;
+    width: 80%;
 }
 table thead tr{
     background-color: #2DAE00;
