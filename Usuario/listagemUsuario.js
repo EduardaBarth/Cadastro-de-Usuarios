@@ -39,25 +39,14 @@ function render() {
             render()
         })
 
-        // const editar = document.createElement("button")
-        // editar.innerText = "Editar"
+        const editar = document.createElement("button")
+        editar.innerText = "Editar"
 
-        // editar.addEventListener("click", function(){
-        //     window.location.href ="editarUsuario.html?id="+usuario.id
-            
-        //     if(pagina === 'cadastroUsuario2'){
-        //         const filtered = users.filter(usuario2 => usuario2.id !== usuario.id)
-        //         document.getElementById('id').value = usuario.id
-        //         document.getElementById('nome').value = usuario.nome
-        //         document.getElementById('email').value = usuario.email
-        //         document.getElementById('senha').value = usuario.senha
-        //         document.getElementById('idade').value = usuario.idade
-        //         document.getElementById('alcada').value = usuario.alcada
-        //     }
-            
-        // })
+        editar.addEventListener("click", function(){
+            window.location.href ="editarUsuario.html?id="+usuario.id
+        })
         tr.appendChild(botao)
-        // tr.appendChild(editar)
+        tr.appendChild(editar)
 
         table.appendChild(tr)
     }

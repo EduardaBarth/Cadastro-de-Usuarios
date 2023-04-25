@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="usuarios.js" defer></script>
+    <link rel="stylesheet" href="cadastroUsuario.css">
+    <link rel="stylesheet" href="/Elementos/elementos.css">
+</head>
+<body>
+    <nav>
+        <a href="">
+        <ul>
+          <li class="greenplace"> GREENPLACE</li>
+          
+        </a>
+        </ul>
+    </nav>
+  
+    <main>
+        <section class="cadastro">
+            <div>
+                <label>Id: </label>
+                <input type="number" id="id" value="3" >
+            </div>
+            <div>
+                <label>Nome: </label>
+                <input type="text" id="nome" value="Pedro">
+            </div>
+            <div>
+                <label>Idade: </label>
+                <input type="number" id="idade" value="50">
+            </div>
+            <div>
+                <label>Email: </label>
+                <input type="text" id="email">
+            </div>
+            <div>
+                <label>Senha: </label>
+                <input type="text" id="senha">
+            </div>
+            <div class="botoes">
+                <select name="" id="select" onload="mostrarAlcada()"></select>
+                <button onclick="editarUsuario()">Salvar</button>
+            </div>
+            
+        </section>
+        
+        <table>
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>Nome</td>
+                    <td>Idade</td>
+                    <td>Email</td>
+                    <td>Alçada</td>
+                </tr>
+            </thead>
+            <tbody>
+    
+            </tbody>
+        </table>
+    </main>
+ 
+    <script>
+        const id = location.search.slice(1).split('=')[1]
+
+        const users = JSON.parse(localStorage.getItem("users"))
+        if(!users) localStorage.setItem("users",JSON.stringify(APP.usuarios))
+
+        for (let i = 0; i < users.length; i++) {
+            const usuario = users[i]
+            if(usuario.id === id){
+                document.getElementById('id').value = usuario.id
+                document.getElementById('nome').value = usuario.nome
+                document.getElementById('email').value = usuario.email
+                document.getElementById('senha').value = usuario.senha
+                document.getElementById('idade').value = usuario.idade
+                // document.getElementById('alcada').value = usuario.alcada
+            }
+        }
+        function editarUsuario(){
+            const inputId = document.getElementById("id")
+            const id = inputId.value
+
+            const inputNome = document.getElementById("nome")
+            const nome = inputNome.value
+
+            const inputIdade = document.getElementById("idade")
+            const idade = inputIdade.value
+
+            const inputEmail = document.getElementById("email")
+            const email = inputEmail.value
+
+            const inputSenha = document.getElementById("senha")
+            const senha = inputSenha.value
+
+            const select = document.getElementById("select")
+            const alcada = select.options[select.selectedIndex].value
+
+            const novoUsuario = {id, nome, idade, email, senha, alcada}
+
+            for (let i = 0; i < users.length; i++) {
+                const usuario = users[i]
+                if(usuario.id === id){
+                    users[i] = novoUsuario
+                }
+                localStorage.setItem("users",JSON.stringify(APP.usuarios))
+            }
+           render()
+        }
+
+    </script>
+</body>
+</html>
