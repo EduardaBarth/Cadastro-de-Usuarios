@@ -73,27 +73,23 @@
                 document.getElementById('email').value = usuario.email
                 document.getElementById('senha').value = usuario.senha
                 document.getElementById('idade').value = usuario.idade
-                document.getElementById('alcada').value = usuario.alcada
+                //document.getElementById('alcada').value = usuario.alcada
             }
         }
         function editarUsuario(){
 
-            const inputNome = document.getElementById("nome")
-            const nome = inputNome.value
+            const nome = document.getElementById("nome").value
 
-            const inputIdade = document.getElementById("idade")
-            const idade = inputIdade.value
+            const idade = document.getElementById("idade").value
 
-            const inputEmail = document.getElementById("email")
-            const email = inputEmail.value
+            const email = document.getElementById("email").value
 
-            const inputSenha = document.getElementById("senha")
-            const senha = inputSenha.value
+            const senha = document.getElementById("senha").value
 
             const select = document.getElementById("select")
             const alcada = select.options[select.selectedIndex].value
 
-            const usuarioNovo = {nome, idade, email, senha, alcada}
+            const usuarioNovo = {id, nome, idade, email, senha, alcada}
 
             for (let i = 0; i < users.length; i++) {
                 const usuario = users[i]
