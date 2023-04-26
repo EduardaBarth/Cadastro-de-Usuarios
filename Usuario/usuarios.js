@@ -6,13 +6,6 @@ const APP = {
 }
 
 function addUsuario(){
-    const inputId = document.getElementById("id")
-    const id = inputId.value
-    if (!id) {
-        alert("informe seu id")
-        return
-    }
-
     const inputNome = document.getElementById("nome")
     const nome = inputNome.value
     if (!nome) {
@@ -43,15 +36,17 @@ function addUsuario(){
     const select = document.getElementById("select")
     const alcada = select.options[select.selectedIndex].value
     
-    const novoUsuario = {id, nome, idade, email, senha, alcada}
-    
     const users = JSON.parse(localStorage.getItem("users"))
+
+    const id = users.length + 1
+
+    const novoUsuario = {id, nome, idade, email, senha, alcada}
+
     localStorage.setItem("users",JSON.stringify(users.concat(novoUsuario)))
-    
+
     render()
 
     inputIdade.value = ""
-    inputId.value = ""
     inputNome.value = ""
     inputEmail.value = ""
     inputSenha.value = ""
